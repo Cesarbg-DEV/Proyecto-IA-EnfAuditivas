@@ -24,6 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', enfermedades_view.home),
     path('home/', enfermedades_view.main),
+    path('acerca/', enfermedades_view.acerca),
     path('instrucciones/', enfermedades_view.instrucciones),
     # path('',include('EnfAuditivas.urls')),
 ]

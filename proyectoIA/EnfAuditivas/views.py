@@ -10,5 +10,8 @@ def home(request):
 def main(request):
     return render(request, 'home.html')
 
+def acerca(request):
+    return render(request, 'acerca.html')
+
 def instrucciones(request):
     return render(request, 'instrucciones.html')
