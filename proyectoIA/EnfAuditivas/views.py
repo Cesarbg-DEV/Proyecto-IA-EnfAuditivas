@@ -6,3 +6,9 @@ from .models import Enfermedades
 # Create your views here.
 def home(request):
     return render(request,'index.html')
+
+def main(request):
+    return render(request, 'home.html')
+
+def instrucciones(request):
+    return render(request, 'instrucciones.html')

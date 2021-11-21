@@ -7,4 +7,6 @@ from EnfAuditivas import views as enfermedades_view
 
 urlpatterns = [
     path('', enfermedades_view.home, name='Home'),
+    path('home/', enfermedades_view.main, name='Main'),
+    path('instrucciones/', enfermedades_view.instrucciones, name='Instrucciones'),
 ]
