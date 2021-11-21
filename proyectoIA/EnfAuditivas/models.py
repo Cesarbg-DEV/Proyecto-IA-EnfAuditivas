@@ -20,4 +20,10 @@ class Enfermedades(models.Model):
     sangrado = models.FloatField(max_length=5)
     sumaEnfermedad = models.FloatField(default=0)
 
+    def __str__(self):
+        return str(self.nombre) +"(" + str(self.id) + ")"
+    class Meta:
+        verbose_name = "Enfermedad"
+        verbose_name_plural = "Enfermedades"
+
 
