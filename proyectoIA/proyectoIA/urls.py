@@ -26,5 +26,6 @@ urlpatterns = [
     path('home/', enfermedades_view.main),
     path('acerca/', enfermedades_view.acerca),
     path('instrucciones/', enfermedades_view.instrucciones),
+    path('autores/', enfermedades_view.autores),
     # path('',include('EnfAuditivas.urls')),
 ]

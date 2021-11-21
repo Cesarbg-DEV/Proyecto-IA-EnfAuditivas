@@ -15,3 +15,6 @@ def acerca(request):
 
 def instrucciones(request):
     return render(request, 'instrucciones.html')
+
+def autores(request):
+    return render(request, 'autores.html')

@@ -10,5 +10,6 @@ urlpatterns = [
     path('home/', enfermedades_view.main, name='Main'),
     path('acerca/', enfermedades_view.acerca, name='Acerca'),
     path('instrucciones/', enfermedades_view.instrucciones, name='Instrucciones'),
+    path('autores/', enfermedades_view.autores, name='Autores'),
     
 ]
