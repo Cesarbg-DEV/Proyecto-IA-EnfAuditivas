@@ -11,4 +11,6 @@ urlpatterns = [
     path('acerca/', enfermedades_view.acerca, name='acerca'),
     path('instrucciones/', enfermedades_view.instrucciones, name='instrucciones'),
     path('autores/', enfermedades_view.autores, name='autores'),   
+
+    path('EnfTaponesCerumen/', enfermedades_view.EnfTaponesCerumen, name='EnfTaponesCerumen'),   
 ]

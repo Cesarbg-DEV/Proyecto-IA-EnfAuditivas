@@ -28,5 +28,9 @@ urlpatterns = [
     path('acerca/', enfermedades_view.acerca),
     path('instrucciones/', enfermedades_view.instrucciones),
     path('autores/', enfermedades_view.autores),
+
+    # ENFERMEDADES 
+    path('EnfTaponesCerumen/', enfermedades_view.EnfTaponesCerumen),
+    
     
 ]

@@ -6,110 +6,410 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto IA</title>
-
+    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-
+    
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+    
     <link rel="icon" href="../static/img/ear.png" type="image/icon type">
     <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
 </head>
 <body>
     <form action="">
         <h2>Fiebre</h2>
-        <select name="fiebre" id="">
+        <select name="fiebre" id="fiebre">
             <option value="0">No</option>
             <option value="1">Sí</option>
         </select>
         <h2>Perdida Auditiva</h2>
-        <select name="PerdAuditiva" id="">
+        <select name="PerdAuditiva" id="PerdAuditiva">
             <option value="0">Nada</option>
             <option value="0.25">Poco</option>
             <option value="0.50">Bastante</option>
             <option value="1">Completamente</option>
         </select>
         <h2>Dolor de Oído</h2>
-        <select name="dolorOido" id="">
+        <select name="dolorOido" id="dolorOido">
             <option value="0">Nada</option>
             <option value="0.25">Poco</option>
             <option value="0.50">Bastante</option>
             <option value="1">Mucho</option>
         </select>
         <h2>Inflamación de Oído</h2>
-        <select name="inflamacion" id="">
+        <select name="inflamacion" id="inflamacion">
             <option value="0">No</option>
             <option value="1">Sí</option>
         </select>
         <h2>Mareos</h2>
-        <select name="mareo" id="">
+        <select name="mareo" id="mareo">
             <option value="0">Nada</option>
             <option value="0.50">Bastante</option>
             <option value="1">Mucho</option>
         </select>
         <h2>Vértigos</h2>
-        <select name="mareo" id="">
+        <select name="vertigos" id="vertigos">
             <option value="0">Nada</option>
             <option value="0.50">Bastante</option>
             <option value="1">Mucho</option>
         </select>
         <h2>Enrojecimiento del Oído</h2>
-        <select name="enrojecimiento" id="">
+        <select name="enrojecimiento" id="enrojecimiento">
             <option value="0">No</option>
             <option value="1">Sí</option>
         </select>
-
+        
         <h2>Fatiga</h2>
-        <select name="fatiga" id="">
+        <select name="fatiga" id="fatiga">
             <option value="0">No</option>
             <option value="1">Sí</option>
         </select>
-
+        
         <h2>Dificultades para Comunicarse</h2>
-        <select name="difComunicacion" id="">
+        <select name="difComunicacion" id="difComunicacion">
             <option value="0">No</option>
             <option value="1">Sí</option>
         </select>
-
+        
         <h2>Zumbidos en el Oído</h2>
-        <select name="zumbidos" id="">
+        <select name="zumbidos" id="zumbidos">
             <option value="0">No</option>
             <option value="1">Sí</option>
         </select>
-
+        
         <h2>Taponamiento de los oídos</h2>
-        <select name="taponamiento" id="">
+        <select name="taponamiento" id="taponamiento">
             <option value="0">No</option>
             <option value="1">Sí</option>
         </select>
-
+        
         <h2>Antecedentes Familiares</h2>
-        <select name="antecedentes" id="">
+        <select name="antecedentes" id="antecedentes">
             <option value="0">No</option>
             <option value="1">Sí</option>
         </select>
-
-        <h2>Picazión en el oído</h2>
-        <select name="picazon" id="">
+        
+        <h2>Picazón en el oído</h2>
+        <select name="picazon" id="picazon">
             <option value="0">No</option>
             <option value="1">Sí</option>
         </select>
-
+        
         <h2>Traumatismos</h2>
-        <select name="traumas" id="">
+        <select name="traumas" id="traumas">
             <option value="0">No</option>
             <option value="1">Sí</option>
         </select>
-
+        
         <h2>Sangrado en el Oído</h2>
-        <select name="sangrado" id="">
+        <select name="sangrado" id="sangrado">
             <option value="0">No</option>
             <option value="1">Sí</option>
         </select>
-
+        
     </form>
+    
+    <button onclick="almacenarValoresUsuario()" class="btn btn-success mt-5 mb-5">Contestar</button>
 </body>
 </html>
+
+<script>
+    
+    function almacenarValoresUsuario() {
+        var valoresUsuario = [];
+        
+        var fiebre = document.getElementById("fiebre").value;
+        var perdAuditiva = document.getElementById("PerdAuditiva").value;
+        var dolorOido = document.getElementById("dolorOido").value;
+        var inflamacion = document.getElementById("inflamacion").value;
+        var mareo = document.getElementById("mareo").value;
+        var vertigos = document.getElementById("vertigos").value;
+        var enrojecimiento = document.getElementById("enrojecimiento").value;
+        var fatiga = document.getElementById("fatiga").value;
+        var difComunicacion = document.getElementById("difComunicacion").value;
+        var zumbidos = document.getElementById("zumbidos").value;
+        var taponamiento = document.getElementById("taponamiento").value;
+        var antecedentes = document.getElementById("antecedentes").value;
+        var picazon = document.getElementById("picazon").value;
+        var traumas = document.getElementById("traumas").value;
+        var sangrado = document.getElementById("sangrado").value;
+        
+        
+        valoresUsuario.push(fiebre, perdAuditiva, dolorOido, inflamacion, mareo, vertigos, enrojecimiento, fatiga, difComunicacion, zumbidos, taponamiento, antecedentes, picazon, traumas, sangrado);
+        
+        console.log("VALORES DEL USUARIO:" + valoresUsuario);
+        
+        // Diccionario del Módulo Precargado 
+        var moduloPrecargado = {}; 
+
+        // Función para sumar los valores de todos los elementos dentro de un arreglo 
+        const reducer = (accumulator, curr) => accumulator + curr;
+
+        moduloPrecargado['taponesCerumen'] = [0, 0.5, 0, 0,	0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0];
+        var sumaModuloPrecargadoTaponesCerumen = moduloPrecargado['taponesCerumen'].reduce(reducer);
+
+        var sumas = [];
+        sumas.push(sumaModuloPrecargadoTaponesCerumen);
+
+        console.log("SUMAS:" + sumas);
+        
+        
+        moduloPrecargado['tinnitus'] = [0, 0.25, 0.25, 0, 0.5, 1, 0, 0.5, 0, 1, 0, 0, 0, 0, 0];
+        moduloPrecargado['otosclerosis'] = [0, 0.5, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0];
+        moduloPrecargado['otematoma'] = [0, 0.5, 0.25, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1];
+        moduloPrecargado['dermatitisSeborreica'] = [0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0];
+        moduloPrecargado['otitisExterna'] = [0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0];
+        moduloPrecargado['presbiacusia'] = [0, 0.25, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0];
+        moduloPrecargado['cofosis'] = [0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0];
+        moduloPrecargado['pericondritis'] = [1, 0, 0.5, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0];
+        moduloPrecargado['traumatismosAcusticos'] = [0, 0.25, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0];
+        
+        // Recorre cada enfermedad en el diccionario de Módulo Precargado 
+        for(var enfermedad in moduloPrecargado) {
+            
+            // Síntomas 
+            var fiebre = moduloPrecargado[enfermedad][0];
+            var perdAuditiva = moduloPrecargado[enfermedad][1];
+            var dolorOido = moduloPrecargado[enfermedad][2];
+            var inflamacion = moduloPrecargado[enfermedad][3];
+            var mareo = moduloPrecargado[enfermedad][4];
+            var vertigos = moduloPrecargado[enfermedad][5];
+            var enrojecimiento = moduloPrecargado[enfermedad][6];
+            var fatiga = moduloPrecargado[enfermedad][7];
+            var difComunicacion = moduloPrecargado[enfermedad][8];
+            var zumbidos = moduloPrecargado[enfermedad][9];
+            var taponamiento = moduloPrecargado[enfermedad][10];
+            var antecedentes = moduloPrecargado[enfermedad][11];
+            var picazon = moduloPrecargado[enfermedad][12];
+            var traumas = moduloPrecargado[enfermedad][13];
+            var sangrado = moduloPrecargado[enfermedad][14];
+
+            // Compara el valor de FIEBRE puesto por el Usuario 
+            if(valoresUsuario[0] == fiebre) {
+                moduloPrecargado[enfermedad][0] = 'v';
+            } else {
+                moduloPrecargado[enfermedad][0] = 'f';
+            }
+
+            console.log("FIEBRE:" + fiebre);
+
+            // Compara el valor de PERDIDA AUDITIVA puesto por el Usuario 
+            if(valoresUsuario[1] == perdAuditiva) {
+                moduloPrecargado[enfermedad][1] = 'v';
+            } else {
+                moduloPrecargado[enfermedad][1] = 'f';
+            }
+
+            // Compara el valor de DOLOR DE OIDO puesto por el Usuario 
+            if(valoresUsuario[2] == dolorOido) {
+                moduloPrecargado[enfermedad][2] = 'v';
+            } else {
+                moduloPrecargado[enfermedad][2] = 'f';
+            }
+
+            // Compara el valor de INFLAMACIÓN puesto por el Usuario 
+            if(valoresUsuario[3] == inflamacion) {
+                moduloPrecargado[enfermedad][3] = 'v';
+            } else {
+                moduloPrecargado[enfermedad][3] = 'f';
+            }
+
+            // Compara el valor de MAREO puesto por el Usuario 
+            if(valoresUsuario[4] == mareo) {
+                moduloPrecargado[enfermedad][4] = 'v';
+            } else {
+                moduloPrecargado[enfermedad][4] = 'f';
+            }
+
+            // Compara el valor de VERTIGO puesto por el Usuario 
+            if(valoresUsuario[5] == vertigos) {
+                moduloPrecargado[enfermedad][5] = 'v';
+            } else {
+                moduloPrecargado[enfermedad][5] = 'f';
+            }
+
+            // Compara el valor de ENROJECIMIENTO puesto por el Usuario 
+            if(valoresUsuario[6] == enrojecimiento) {
+                moduloPrecargado[enfermedad][6] = 'v';
+            } else {
+                moduloPrecargado[enfermedad][6] = 'f';
+            }
+
+            // Compara el valor de FATIGA puesto por el Usuario 
+            if(valoresUsuario[7] == fatiga) {
+                moduloPrecargado[enfermedad][7] = 'v';
+            } else {
+                moduloPrecargado[enfermedad][7] = 'f';
+            }
+
+            // Compara el valor de DIFICULTAD DE COMUNICACIÓN puesto por el Usuario 
+            if(valoresUsuario[8] == enrojecimiento) {
+                moduloPrecargado[enfermedad][8] = 'v';
+            } else {
+                moduloPrecargado[enfermedad][8] = 'f';
+            }
+
+            // Compara el valor de ZUMBIDOS puesto por el Usuario 
+            if(valoresUsuario[9] == zumbidos) {
+                moduloPrecargado[enfermedad][9] = 'v';
+            } else {
+                moduloPrecargado[enfermedad][9] = 'f';
+            }
+
+            // Compara el valor de TAPONAMIENTO puesto por el Usuario 
+            if(valoresUsuario[10] == taponamiento) {
+                moduloPrecargado[enfermedad][10] = 'v';
+            } else {
+                moduloPrecargado[enfermedad][10] = 'f';
+            }
+
+            // Compara el valor de ANTECEDENTES puesto por el Usuario 
+            if(valoresUsuario[11] == antecedentes) {
+                moduloPrecargado[enfermedad][11] = 'v';
+            } else {
+                moduloPrecargado[enfermedad][11] = 'f';
+            }
+
+            // Compara el valor de PICAZON puesto por el Usuario 
+            if(valoresUsuario[12] == picazon) {
+                moduloPrecargado[enfermedad][12] = 'v';
+            } else {
+                moduloPrecargado[enfermedad][12] = 'f';
+            }
+
+            // Compara el valor de TRAUMAS puesto por el Usuario 
+            if(valoresUsuario[13] == traumas) {
+                moduloPrecargado[enfermedad][13] = 'v';
+            } else {
+                moduloPrecargado[enfermedad][13] = 'f';
+            }
+
+            // Compara el valor de SANGRADO puesto por el Usuario 
+            if(valoresUsuario[14] == sangrado) {
+                moduloPrecargado[enfermedad][14] = 'v';
+            } else {
+                moduloPrecargado[enfermedad][14] = 'f';
+            }       
+        }
+
+        // Contadores de Síntomas Acertados 
+
+        // TAPONES DE CERUMEN 
+        var contadorSintomasTaponesCerumen = 0;
+        for(var i in moduloPrecargado['taponesCerumen']) {
+            console.log("VALORES DE LOS SÍNTOMAS DE TAPONES DE CERUMEN:" + moduloPrecargado['taponesCerumen'][i]);
+            if(moduloPrecargado['taponesCerumen'][i] == 'v'){
+                contadorSintomasTaponesCerumen++;
+            }
+        }
+
+        // TINNITUS
+        var contadorSintomasTinnitus = 0;
+        for(var i in moduloPrecargado['tinnitus']) {
+            // console.log(moduloPrecargado['tinnitus'][i]);
+            if(moduloPrecargado['tinnitus'][i] == 'v'){
+                contadorSintomasTinnitus++;
+            }
+        }
+
+        // OTOSCLEROSIS---
+        var contadorSintomasOtosclerosis = 0;
+        for(var i in moduloPrecargado['otosclerosis']) {
+            // console.log(moduloPrecargado['otosclerosis'][i]);
+            if(moduloPrecargado['otosclerosis'][i] == 'v'){
+                contadorSintomasOtosclerosis++;
+            }
+        }
+        
+        // OTEMATOMA
+        var contadorSintomasOtematoma = 0;
+        for(var i in moduloPrecargado['otematoma']) {
+            // console.log(moduloPrecargado['otematoma'][i]);
+            if(moduloPrecargado['otematoma'][i] == 'v'){
+                contadorSintomasOtematoma++;
+            }
+        }
+
+        // DERMATITIS SEBORREICA
+        var contadorSintomasDerSebo = 0;
+        for(var i in moduloPrecargado['dermatitisSeborreica']) {
+            // console.log(moduloPrecargado['dermatitisSeborreica'][i]);
+            if(moduloPrecargado['dermatitisSeborreica'][i] == 'v'){
+                contadorSintomasDerSebo++;
+            }
+        }
+
+        // OTITIS EXTERNA
+        var contadorSintomasOtoExt = 0;
+        for(var i in moduloPrecargado['otitisExterna']) {
+            // console.log(moduloPrecargado['otitisExterna'][i]);
+            if(moduloPrecargado['otitisExterna'][i] == 'v'){
+                contadorSintomasOtoExt++;
+            }
+        }
+
+        // PRESBIACUSIA
+        var contadorSintomasPresb = 0;
+        for(var i in moduloPrecargado['presbiacusia']) {
+            // console.log(moduloPrecargado['presbiacusia'][i]);
+            if(moduloPrecargado['presbiacusia'][i] == 'v'){
+                contadorSintomasPresb++;
+            }
+        }
+
+        // COFOSIS
+        var contadorSintomasCofosis = 0;
+        for(var i in moduloPrecargado['cofosis']) {
+            // console.log(moduloPrecargado['cofosis'][i]);
+            if(moduloPrecargado['cofosis'][i] == 'v'){
+                contadorSintomasCofosis++;
+            }
+        }
+
+        // PERICONDRITIS
+        var contadorSintomasPeri = 0;
+        for(var i in moduloPrecargado['pericondritis']) {
+            // console.log(moduloPrecargado['pericondritis'][i]);
+            if(moduloPrecargado['pericondritis'][i] == 'v'){
+                contadorSintomasPeri++;
+            }
+        }
+
+        // TRAUMATISMOS ACÚSTICOS
+        var contadorSintomasTrauAcus = 0;
+        for(var i in moduloPrecargado['traumatismosAcusticos']) {
+            // console.log(moduloPrecargado['traumatismosAcusticos'][i]);
+            if(moduloPrecargado['traumatismosAcusticos'][i] == 'v'){
+                contadorSintomasTrauAcus++;
+            }
+        }
+  
+        // CONTADORES PARA COMPARATIVAS 
+        var contadorUniversalSintomasEnfermedad = [];
+        contadorUniversalSintomasEnfermedad.push(contadorSintomasTaponesCerumen, contadorSintomasTinnitus, contadorSintomasOtosclerosis, contadorSintomasOtematoma, contadorSintomasDerSebo, contadorSintomasOtoExt, contadorSintomasPresb, contadorSintomasCofosis, contadorSintomasPeri, contadorSintomasTrauAcus);
+
+        console.log("CONTADOR UNIVERSAL:" + contadorUniversalSintomasEnfermedad);
+        
+        // Obtiene el índice de la enfermedad donde se tiene la mayor cantidad de síntomas registrados ("v")
+        var indiceMaxSintomas = contadorUniversalSintomasEnfermedad.indexOf(Math.max(...contadorUniversalSintomasEnfermedad));
+
+        console.log("ÍNDICE CON MAYOR NÚMERO DE SÍNTOMAS:" + indiceMaxSintomas);       
+        console.log("CONTADOR UNIVERSAL 0:" + contadorUniversalSintomasEnfermedad[0]);
+
+
+        // Determina la Enfermedad Auditiva que se padece
+        if((indiceMaxSintomas == 0) && (sumas[indiceMaxSintomas] == sumaModuloPrecargadoTaponesCerumen)) {
+            console.log("TIENES LA ENFERMEDAD DE TAPONES DE CERUMEN");
+            console.log(indiceMaxSintomas);
+            console.log(sumas[indiceMaxSintomas]);
+        } else {
+            console.log("OTRO");
+            console.log(sumas[indiceMaxSintomas]);
+        }
+
+        
+    }
+</script>

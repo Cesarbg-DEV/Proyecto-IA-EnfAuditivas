@@ -21,3 +21,12 @@ def instrucciones(request):
 
 def autores(request):
     return render(request, 'autores.html')
+
+# ENFERMEDADES
+
+def EnfTaponesCerumen(request):
+    return render(request, 'EnfTaponesCerumen.html')
+
+
+
+
