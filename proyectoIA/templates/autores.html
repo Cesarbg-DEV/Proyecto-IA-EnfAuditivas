@@ -39,7 +39,7 @@
     <header style="position: fixed; width: -webkit-fill-available; z-index: 100;">
         <div class="container">
             <nav class="navbar navbar-expand-md">
-                <a class="navbar-brand" href="#home">
+                <a class="navbar-brand" href="{% url 'home' %}">
                     <img src="../static/img/ear.png" height="30" alt="image">
                 </a>
                 
@@ -50,19 +50,19 @@
                 <div class="collapse navbar-collapse" id="navbarNav3">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item active">                  
-                            <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="acerca/">Acerca de</a>
+                            <a class="nav-link" href="{% url 'acerca' %}">Acerca de</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="instrucciones.html">Instrucciones</a>
+                            <a class="nav-link" href="{% url 'instrucciones' %}">Instrucciones</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#menu">Examen</a>
+                            <a class="nav-link" href="{% url 'index' %}">Examen</a>
                         </li>
                         <li class="nav-item">
-                            <strong><a class="nav-link" href="#autora">Autores</a></strong>
+                            <strong><a class="nav-link" href="{% url 'autores' %}">Autores</a></strong>
                         </li>
                     </ul>
                     
@@ -102,10 +102,8 @@
                         <p>Ingeniería en Computación</p>                     
                         <p>Desarrolladora e Investigadora</p>
                     </div>
-                </div>
-                
+                </div>                
             </div>
-        </section>
-        
+        </section>        
     </body>
     </html>

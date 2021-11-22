@@ -22,10 +22,11 @@ from EnfAuditivas import views as enfermedades_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', enfermedades_view.home),
-    path('home/', enfermedades_view.main),
+    path('', enfermedades_view.index),
+    path('', include('EnfAuditivas.urls')),
+    path('home/', enfermedades_view.home),
     path('acerca/', enfermedades_view.acerca),
     path('instrucciones/', enfermedades_view.instrucciones),
     path('autores/', enfermedades_view.autores),
-    # path('',include('EnfAuditivas.urls')),
+    
 ]

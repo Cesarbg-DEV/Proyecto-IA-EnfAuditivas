@@ -4,13 +4,16 @@ from .models import Enfermedades
 #from .forms import
 
 # Create your views here.
-def home(request):
+def index(request):
     return render(request,'index.html')
 
-def main(request):
+def home(request):
     return render(request, 'home.html')
 
 def acerca(request):
+    # if request.user.is_authenticated:
+    #     return redirect("/alumnos")
+
     return render(request, 'acerca.html')
 
 def instrucciones(request):
