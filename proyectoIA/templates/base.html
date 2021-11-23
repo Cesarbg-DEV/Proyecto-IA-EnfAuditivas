@@ -295,48 +295,48 @@
             // Función para sumar los valores de todos los elementos dentro de un arreglo 
             const reducer = (accumulator, curr) => accumulator + curr;
             
-            // Suma de cada enfermedad en base al módulo de precargado 
-            
+            // Suma de cada enfermedad en base al módulo de precargado             
+
             // TAPONES DE CERUMEN
             moduloPrecargado['taponesCerumen'] = [0, 0.5, 0, 0,	0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0];
-            var sumaModuloPrecargadoTaponesCerumen = moduloPrecargado['taponesCerumen'].reduce(reducer);         
+            var sumaModuloPrecargadoTaponesCerumen = parseInt(moduloPrecargado['taponesCerumen'].reduce(reducer));         
             
             // TINNITUS             
             moduloPrecargado['tinnitus'] = [0, 0.25, 0.25, 0, 0.5, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0];
-            var sumaModuloPrecargadoTinnitus = moduloPrecargado['tinnitus'].reduce(reducer);         
+            var sumaModuloPrecargadoTinnitus = parseInt(moduloPrecargado['tinnitus'].reduce(reducer));       
             
             //OTOSCLEOROSIS
             moduloPrecargado['otosclerosis'] = [0, 0.5, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0];
-            var sumaModuloPrecargadoOtoscleorosis = moduloPrecargado['otosclerosis'].reduce(reducer);         
+            var sumaModuloPrecargadoOtoscleorosis = parseInt(moduloPrecargado['otosclerosis'].reduce(reducer));         
             
             //OTEMATOMA
             moduloPrecargado['otematoma'] = [0, 0.5, 0.25, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1];
-            var sumaModuloPrecargadoOtematoma = moduloPrecargado['otematoma'].reduce(reducer);         
+            var sumaModuloPrecargadoOtematoma = parseInt(moduloPrecargado['otematoma'].reduce(reducer));         
             
             //DERMATITIS SEBORREICA
             moduloPrecargado['dermatitisSeborreica'] = [0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0];
-            var sumaModuloPrecargadoDermatitisSeborreica = moduloPrecargado['dermatitisSeborreica'].reduce(reducer);         
+            var sumaModuloPrecargadoDermatitisSeborreica = parseInt(moduloPrecargado['dermatitisSeborreica'].reduce(reducer));         
             
             //OTITIS EXTERNA
             moduloPrecargado['otitisExterna'] = [0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0];
-            var sumaModuloPrecargadoOtitisExterna = moduloPrecargado['otitisExterna'].reduce(reducer);         
+            var sumaModuloPrecargadoOtitisExterna = parseInt(moduloPrecargado['otitisExterna'].reduce(reducer)); 
             
             //PRESBIACUSIA
             moduloPrecargado['presbiacusia'] = [0, 0.25, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0];
-            var sumaModuloPrecargadoPresbiacusia = moduloPrecargado['presbiacusia'].reduce(reducer);
+            var sumaModuloPrecargadoPresbiacusia = parseInt(moduloPrecargado['presbiacusia'].reduce(reducer));
             
             //COFOSIS
             moduloPrecargado['cofosis'] = [0, 0.5, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0];
-            var sumaModuloPrecargadoCofosis = moduloPrecargado['cofosis'].reduce(reducer);
+            var sumaModuloPrecargadoCofosis = parseInt(moduloPrecargado['cofosis'].reduce(reducer));
             console.log(sumaModuloPrecargadoCofosis);
             
             //PERICONDRITIS
             moduloPrecargado['pericondritis'] = [1, 0.25, 0.5, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0];
-            var sumaModuloPrecargadoPericondritis = moduloPrecargado['pericondritis'].reduce(reducer);
+            var sumaModuloPrecargadoPericondritis = parseInt(moduloPrecargado['pericondritis'].reduce(reducer));
             
             //TRAUMATISMOS ACUSTICOS
             moduloPrecargado['traumatismosAcusticos'] = [0, 0.25, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0];
-            var sumaModuloPrecargadoTraumatismosAcusticos = moduloPrecargado['traumatismosAcusticos'].reduce(reducer);
+            var sumaModuloPrecargadoTraumatismosAcusticos = parseInt(moduloPrecargado['traumatismosAcusticos'].reduce(reducer));
             
             
             // Recorre cada enfermedad en el diccionario de Módulo Precargado 
@@ -446,9 +446,7 @@
                 if(moduloPrecargado['taponesCerumen'][i] != 'f'){
                     nuevaSumaSintomasTaponesCerumen += moduloPrecargado['taponesCerumen'][i];
                 }
-            }
-            
-            
+            }         
             
             // TINNITUS
             var nuevaSumaSintomasTinnitus = 0;
@@ -498,7 +496,7 @@
             console.log("VALORES DE LOS SÍNTOMAS DE OTITIS EXTERNA:" + moduloPrecargado['otitisExterna']);
             console.log("NUEVA SUMA OTITIS EXTERNA:" + nuevaSumaSintomasOtoExt);
             console.log("SUMA ORIGINAL OTITIS EXTERNA:" + sumaModuloPrecargadoOtitisExterna);
-
+            
             console.log("VALORES DE LOS SÍNTOMAS DE DERMATITIS:" + moduloPrecargado['dermatitisSeborreica']);
             console.log("NUEVA SUMA DERMATITIS:" + nuevaSumaSintomasDerSebo);
             console.log("SUMA ORIGINAL DERMATITIS:" + sumaModuloPrecargadoDermatitisSeborreica);
@@ -539,32 +537,43 @@
                 if(moduloPrecargado['traumatismosAcusticos'][i] != 'f'){
                     nuevaSumaSintomasTrauAcus += moduloPrecargado['traumatismosAcusticos'][i];
                 }
-            }
-            
-            // // CONTADORES PARA COMPARATIVAS 
-            // var contadorUniversalSintomasEnfermedad = [];
-            // contadorUniversalSintomasEnfermedad.push(nuevaSumaSintomasTaponesCerumen, contadorSintomasTinnitus, contadorSintomasOtosclerosis, contadorSintomasOtematoma, contadorSintomasDerSebo, contadorSintomasOtoExt, contadorSintomasPresb, contadorSintomasCofosis, contadorSintomasPeri, contadorSintomasTrauAcus);
-            
-            // console.log("CONTADOR UNIVERSAL:" + contadorUniversalSintomasEnfermedad);
-            
-            // // Obtiene el índice de la enfermedad donde se tiene la mayor cantidad de síntomas registrados ("v")
-            // var indiceMaxSintomas = contadorUniversalSintomasEnfermedad.indexOf(Math.max(...contadorUniversalSintomasEnfermedad));
-            
-            // console.log("ÍNDICE CON MAYOR NÚMERO DE SÍNTOMAS:" + indiceMaxSintomas);       
-            // console.log("CONTADOR UNIVERSAL 0:" + contadorUniversalSintomasEnfermedad[0]);
-            
+            }            
             
             // DETERMINA LA ENFERMEDAD AUDITIVA QUE SE PADECE
             
-            // Caso en que todos los síntomas sean 0 
-            // Caso en que todos los síntomas sean 0 excepto los antecedentes familiares 
-            // Caso en que la suma de los valores de todos los síntomas del usuario ingresados sean menor al UMBRAL de 2
-            // Caso en que todos los síntomas sean 1 
+            var sumaValoresUsuario = 0;
+            for(var i in valoresUsuario) {
+                sumaValoresUsuario += parseInt(valoresUsuario[i]);
+            }
             
-            // Caso en que la suma original por fila del módulo precargado sea igual a la suma de todos los valores del arreglo de datos ingresados por el usuario             
+            // 1. Caso en que todos los síntomas sean 0 
+            if(sumaValoresUsuario == 0) {
+                // REDIRECCIONAR A PANTALLA DE NO TIENES ENFERMEDADES 
+                console.log("PANTALLA NO TIENES ENFERMEDADES");
+            }
+            
+            // 2. Caso en que todos los síntomas sean 0 excepto los antecedentes familiares 
+            if(sumaValoresUsuario == 1 && valoresUsuario[11] == 1) {
+                // REDIRECCIONAR A PANTALLA DE NO TIENES ENFERMEDADES 
+                console.log("PANTALLA NO TIENES ENFERMEDADES");
+            }
+
+            // 3. Caso en que la suma de los valores de todos los síntomas del usuario ingresados sean menor al UMBRAL de 2
+            if(sumaValoresUsuario < 2) {
+                // REDIRECCIONAR A PANTALLA DE NO TIENES ENFERMEDADES 
+                console.log("PANTALLA NO TIENES ENFERMEDADES!!!!!!!!!!!!!");
+            }
+            // 4. Caso en que todos los síntomas sean 1 
+            if(sumaValoresUsuario == 15) {
+                // REDIRECCIONAR A PANTALLA DE NO TIENES ENFERMEDADES 
+                console.log("PANTALLA CUIDADO VETE A CHECAR");
+            }
+            
+            // 5. Casos en que la suma original por fila del módulo precargado sea igual a la suma de todos los valores del arreglo de datos ingresados por el usuario             
             // TAPONES DE CERUMEN
             if(nuevaSumaSintomasTaponesCerumen == sumaModuloPrecargadoTaponesCerumen) {
                 console.log("TIENES LA ENFERMEDAD DE TAPONES DE CERUMEN");
+                location.href = '{% url 'EnfTaponesCerumen' %}';
             } else {
                 console.log("OTRO");
             }
