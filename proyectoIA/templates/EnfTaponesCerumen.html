@@ -25,6 +25,10 @@
         background: linear-gradient(to bottom, #ffffff, #bee1f1); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     }
 
+    .lead {
+        text-align: justify;
+    }
+
 </style>
 
 <body>
@@ -43,7 +47,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav3">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item active">                  
-                            <strong><a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a></strong>
+                            <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'acerca' %}">Acerca de</a>
@@ -52,45 +56,52 @@
                             <a class="nav-link" href="{% url 'instrucciones' %}">Instrucciones</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'index' %}">Examen</a>
+                            <strong><a class="nav-link" href="{% url 'index' %}">Examen</a></strong>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'autores' %}">Autores</a>
                         </li>
                     </ul>
-                    
-                    <!-- <a class="btn btn-outline-primary ml-md-3" href="#">High Scores</a> -->
                 </div>
             </nav>
         </div>
     </header>
     
-    <!-- Home -->
-    <section class="fdb-block" id="home">
-        <div class="container">
-            <div class="row align-items-center" style="height: 100vh;">
-                <div class="col-12 col-md-12 col-lg-5 col-xl-5" style="display: flex; flex-direction: column;">
-                    <h5>¿Sientes malestares auditivos?</h5>
-                    <h5>¿Te cuesta escuchar sonidos leves?</h5>
-                    <h1>TAPONES CERUMEN</h1>
-                    <h1 class="mb-4 mt-3" style="font-size: 3.5em; color: rgb(0, 71, 71); font-family: 'Special Elite', cursive; font-weight: 500;">Test de Enfermedades Auditivas</h1>
-                    <h5 class="mb-3" style="font-size: 1.2em;">¡Prueba nuestro test y descubre si posiblemente tengas alguna enfermedad auditiva!</h5>
-                    
-                    <button onclick="location.href='{% url 'instrucciones' %}'"; class="btn btn-primary mb-3">Comenzar</button>
-                    <p><strong>Disponible en:</strong></p>
-                    <p class="h1 text-muted">
-                        <i class="fab fa-chrome mr-3"></i>
-                        <i class="fab fa-safari mr-3"></i>
-                        <i class="fab fa-firefox mr-3"></i>
-                        <i class="fab fa-edge"></i>
-                    </p>
-                </div>
-                <div class="col-12 col-md-8 m-auto ml-lg-auto mr-lg-0 col-lg-7 pt-5 pt-lg-0">
-                    <img alt="image" class="img-fluid" src="../static/img/enfAuditivasPortada.png">
-                </div>
+    <!-- ENFERMEDAD TAPONES DE CERUMEN -->
+    <section class="fdb-block" id="menu">
+        <div class="container" style="height: 100vh;">
+          <div class="row text-center">
+            <div class="col-12" style="margin-top: 10%;">
+              <h1 style="font-family: 'Special Elite', cursive; font-weight: bold;">Resultado: Enfermedad de Tapones de Cerumen</h1>
             </div>
+          </div>
+          <div class="row" style="display: flex; padding: 20px; justify-content: center;">
+            <div class="row text-left align-items-center mt-3">
+                <div class="col-10 col-sm-6 m-auto m-lg-0 col-lg-4">
+                  <img alt="image" class="img-fluid" src="../static/img/CERUMEN.png">
+                  <img alt="image" class="img-fluid" src="../static/img/CERUMEN 2.png" style="margin-top: 40px;">
+                </div>
+          
+                <div class="col-12 col-lg-7 offset-lg-1 pt-4 pt-lg-0">
+                  <h1>Tapones de Cerumen</h1>
+                  <p class="lead">En el oído hay glándulas que producen cerumen, la cual protege el oído de la irritación por el agua y del polvo y de los patógenos. Sin embargo, algunas personas producen más de lo normal y este cerumen puede endurecerse y bloquear el conducto auditivo, formándose un tapón de cera.</p>
+          
+                  <div class="row mt-5">
+                    <div class="col-12 col-sm-6">
+                      <h3><strong>Síntomas</strong></h3>
+                      <p class="lead">No eliminar el exceso de cera puede provocar dolor de oído, sensación de taponamiento, tinnitus e incluso pérdida de audición. </p>
+                    </div>
+          
+                    <div class="col-12 col-sm-6 pt-3 pt-sm-0">
+                      <h3><strong>Tratamiento</strong></h3>
+                      <p class="lead">El tratamiento puede administrarse en casa y consiste en aplicar gotas, aunque si el problema persiste, un médico puede hacer un lavado para extraer el exceso de cerumen.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>         
         </div>
-    </section>
+      </section>
     
 </body>
 </html>

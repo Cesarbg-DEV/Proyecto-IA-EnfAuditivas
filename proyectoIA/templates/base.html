@@ -153,7 +153,7 @@
                     
                     <!-- Pregunta #7 - Enrojecimiento de Oído-->
                     <div class="col-12 mt-2" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
-                        <h4 class="mb-3 mb-4">¿Notas enrojecimientos en los oídos?</h4>
+                        <h4 class="mb-3 mb-4">¿Notas enrojecimiento en los oídos?</h4>
                         <div class="h4" style="display: flex; width: -webkit-fill-available; justify-content: space-evenly;">
                             <select name="enrojecimiento" id="enrojecimiento">
                                 <option value="0">No</option>
@@ -253,7 +253,7 @@
                     
                     <!-- Regresar y Enviar Respuestas  -->
                     <div class="row mt-5 mb-3" style="width: -webkit-fill-available; display: flex; justify-content: space-evenly;">
-                        <button type="button" class="btn btn-danger" onclick="location.href='DecalogoYokoi.html'">Regresar</button>
+                        <button type="button" class="btn btn-danger" onclick="location.href='{% url 'instrucciones' %}' ";>Regresar</button>
                         <button onclick="almacenarValoresUsuario()" type="button" class="btn btn-success">Enviar Respuestas</button>
                     </div>              
                 </div>
@@ -299,44 +299,44 @@
 
             // TAPONES DE CERUMEN
             moduloPrecargado['taponesCerumen'] = [0, 0.5, 0, 0,	0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0];
-            var sumaModuloPrecargadoTaponesCerumen = parseInt(moduloPrecargado['taponesCerumen'].reduce(reducer));         
+            var sumaModuloPrecargadoTaponesCerumen = moduloPrecargado['taponesCerumen'].reduce(reducer);         
             
             // TINNITUS             
             moduloPrecargado['tinnitus'] = [0, 0.25, 0.25, 0, 0.5, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0];
-            var sumaModuloPrecargadoTinnitus = parseInt(moduloPrecargado['tinnitus'].reduce(reducer));       
+            var sumaModuloPrecargadoTinnitus = moduloPrecargado['tinnitus'].reduce(reducer);       
             
-            //OTOSCLEOROSIS
+            // OTOSCLEOROSIS
             moduloPrecargado['otosclerosis'] = [0, 0.5, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0];
-            var sumaModuloPrecargadoOtoscleorosis = parseInt(moduloPrecargado['otosclerosis'].reduce(reducer));         
+            var sumaModuloPrecargadoOtoscleorosis = moduloPrecargado['otosclerosis'].reduce(reducer);         
             
-            //OTEMATOMA
+            // OTEMATOMA
             moduloPrecargado['otematoma'] = [0, 0.5, 0.25, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1];
-            var sumaModuloPrecargadoOtematoma = parseInt(moduloPrecargado['otematoma'].reduce(reducer));         
+            var sumaModuloPrecargadoOtematoma = moduloPrecargado['otematoma'].reduce(reducer);         
             
-            //DERMATITIS SEBORREICA
+            // DERMATITIS SEBORREICA
             moduloPrecargado['dermatitisSeborreica'] = [0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0];
-            var sumaModuloPrecargadoDermatitisSeborreica = parseInt(moduloPrecargado['dermatitisSeborreica'].reduce(reducer));         
+            var sumaModuloPrecargadoDermatitisSeborreica = moduloPrecargado['dermatitisSeborreica'].reduce(reducer);         
             
-            //OTITIS EXTERNA
+            // OTITIS EXTERNA
             moduloPrecargado['otitisExterna'] = [0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0];
-            var sumaModuloPrecargadoOtitisExterna = parseInt(moduloPrecargado['otitisExterna'].reduce(reducer)); 
+            var sumaModuloPrecargadoOtitisExterna = moduloPrecargado['otitisExterna'].reduce(reducer); 
             
-            //PRESBIACUSIA
+            // PRESBIACUSIA
             moduloPrecargado['presbiacusia'] = [0, 0.25, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0];
-            var sumaModuloPrecargadoPresbiacusia = parseInt(moduloPrecargado['presbiacusia'].reduce(reducer));
+            var sumaModuloPrecargadoPresbiacusia = moduloPrecargado['presbiacusia'].reduce(reducer);
             
-            //COFOSIS
+            // COFOSIS
             moduloPrecargado['cofosis'] = [0, 0.5, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0];
-            var sumaModuloPrecargadoCofosis = parseInt(moduloPrecargado['cofosis'].reduce(reducer));
+            var sumaModuloPrecargadoCofosis = moduloPrecargado['cofosis'].reduce(reducer);
             console.log(sumaModuloPrecargadoCofosis);
             
-            //PERICONDRITIS
+            // PERICONDRITIS
             moduloPrecargado['pericondritis'] = [1, 0.25, 0.5, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0];
-            var sumaModuloPrecargadoPericondritis = parseInt(moduloPrecargado['pericondritis'].reduce(reducer));
+            var sumaModuloPrecargadoPericondritis = moduloPrecargado['pericondritis'].reduce(reducer);
             
-            //TRAUMATISMOS ACUSTICOS
+            // TRAUMATISMOS ACUSTICOS
             moduloPrecargado['traumatismosAcusticos'] = [0, 0.25, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0];
-            var sumaModuloPrecargadoTraumatismosAcusticos = parseInt(moduloPrecargado['traumatismosAcusticos'].reduce(reducer));
+            var sumaModuloPrecargadoTraumatismosAcusticos = moduloPrecargado['traumatismosAcusticos'].reduce(reducer);
             
             
             // Recorre cada enfermedad en el diccionario de Módulo Precargado 
