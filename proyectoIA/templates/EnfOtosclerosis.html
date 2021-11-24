@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Autores || Enfermedades Auditivas</title>
+    <title>Enfermedad: Otosclerosis || Enfermedades Auditivas</title>
     
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
@@ -24,14 +24,12 @@
         background: -webkit-linear-gradient(to bottom, #ffffff, #bee1f1);  /* Chrome 10-25, Safari 5.1-6 */
         background: linear-gradient(to bottom, #ffffff, #bee1f1); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     }
-    
-    .carousel-caption {
-        background: -webkit-linear-gradient(to bottom, #ffffff, #bee1f1);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to bottom, #ffffff, #bee1f1); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        color: black;
-        border-radius: 20px; 
-        padding: 20px;
+
+    .lead {
+        text-align: justify;
+        font-size: 1.2em;
     }
+
 </style>
 
 <body>
@@ -59,51 +57,52 @@
                             <a class="nav-link" href="{% url 'instrucciones' %}">Instrucciones</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'index' %}">Examen</a>
+                            <strong><a class="nav-link" href="{% url 'index' %}">Examen</a></strong>
                         </li>
                         <li class="nav-item">
-                            <strong><a class="nav-link" href="{% url 'autores' %}">Autores</a></strong>
+                            <a class="nav-link" href="{% url 'autores' %}">Autores</a>
                         </li>
                     </ul>
-                    
-                    <!-- <a class="btn btn-outline-primary ml-md-3" href="#">High Scores</a> -->
                 </div>
             </nav>
         </div>
     </header>
     
-    <!-- Autores -->
+    <!-- ENFERMEDAD OTOSCLEROSIS -->
     <section class="fdb-block" id="menu">
         <div class="container" style="height: 100vh;">
-            <div class="row text-center">
-                <div class="col-12 mb-2" style="margin-top: 8%;">
-                    <h1 style="font-family: 'Special Elite', cursive; font-weight: bold;">Autores</h1>
+          <div class="row text-center">
+            <div class="col-12" style="margin-top: 10%;">
+              <h1 style="font-family: 'Special Elite', cursive; font-weight: bold;">Resultado: Enfermedad de Otosclerosis</h1>
+            </div>
+          </div>
+          <div class="row" style="display: flex; padding: 20px; justify-content: center;">
+            <div class="row text-left align-items-center mt-3">
+                <div class="col-10 col-sm-6 m-auto m-lg-0 col-lg-4">
+                  <img alt="image" class="img-fluid" src="../static/img/OTOSCLEROSIS.png">
+                  <img alt="image" class="img-fluid" src="../static/img/OTOSCLEROSIS 2.png" style="margin-top: 40px;">
                 </div>
-            </div>
-            <div class="row" style="display: flex;  justify-content: center;">
-                <div class="row text-center justify-content-center">
-                    <div class="col-sm-3 m-sm-auto">
-                        <img alt="image" class="img-fluid rounded-circle" src="../static/img/ana.jpg">                        
-                        <h3>Ana Graciela Vassallo Fedotkin</h3>
-                        <p>Ingeniería de Software</p>
-                        <p>Desarrolladora Full Stack</p>
+          
+                <div class="col-12 col-lg-7 offset-lg-1 pt-4 pt-lg-0">
+                  <h1>Otosclerosis</h1>
+                  <p class="lead">La otosclerosis es un crecimiento anormal de los huesos del oído medio. <br> La causa se desconoce, aunque se cree que podría ser hereditaria.</p>
+          
+                  <div class="row mt-2">
+                    <div class="col-12 col-sm-6">
+                      <h3><strong>Síntomas</strong></h3>
+                      <p class="lead">Pérdida de audición progresiva, vértigos, mareos, tinnitus, etc. <br> La otosclerosis empeora lentamente, pero las afectaciones en el sentido del oído pueden ser importantes.</p>
                     </div>
-                    
-                    <div class="col-sm-3 m-sm-auto">
-                        <img alt="image" class="img-fluid rounded-circle" src="../static/img/cesar.jpeg">                        
-                        <h3>César Balderas Guillén</h3>
-                        <p>Ingeniería de Software</p>
-                        <p>Desarrollador Full Stack</p>
+          
+                    <div class="col-12 col-sm-6 pt-3 pt-sm-0">
+                      <h3><strong>Tratamiento</strong></h3>
+                      <p class="lead">Al ser genético, no existe cura. Los tratamientos con calcio o vitamina D pueden ralentizar la pérdida auditiva, aunque esto no está del todo corroborado. Cuando la enfermedad ha progresado mucho, los audífonos e incluso la cirugía en los huesos afectados (reemplazándolos con una prótesis) pueden ser útiles.</p>
                     </div>
-                    
-                    <div class="col-sm-3 m-sm-auto">
-                        <img alt="image" class="img-fluid rounded-circle" src="../static/img/aylin.jpg">                        
-                        <h3>Gloria Aylín Arredondo Mejía</h3>   
-                        <p>Ingeniería en Computación</p>                     
-                        <p>Desarrolladora e Investigadora</p>
-                    </div>
-                </div>                
-            </div>
-        </section>        
-    </body>
-    </html>
+                  </div>
+                </div>
+              </div>
+          </div>         
+        </div>
+      </section>
+    
+</body>
+</html>
