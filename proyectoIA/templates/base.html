@@ -523,7 +523,7 @@
             // DETERMINA LA ENFERMEDAD AUDITIVA QUE SE PADECE            
             var sumaValoresUsuario = 0;
             for(var i in valoresUsuario) {
-                sumaValoresUsuario += parseInt(valoresUsuario[i]);
+                sumaValoresUsuario += parseFloat(valoresUsuario[i]);
             }
             
             // 1. Caso en que todos los síntomas sean 0 
@@ -546,32 +546,19 @@
                 location.href = '{% url 'EnfNoEnfermedades' %}';                
                 console.log("PANTALLA NO TIENES ENFERMEDADES");
                 return;
-            }
-            // 4. Caso en que todos los síntomas sean 1 ó que la suma de los síntomas de cada fila de la enfermedad respectivamente sea mayor a su máximo número 4.75
-            if(sumaValoresUsuario == 15 || sumaValoresUsuario > 4.75) {
-                // REDIRECCIONAR A PANTALLA DE NO TIENES ENFERMEDADES 
-                location.href = '{% url 'EnfPeligro' %}';                
-                console.log("PANTALLA CUIDADO VETE A CHECAR");
-                return;
-            }
+            }           
 
-            // 6. Caso en que los síntomas den un valor de 2.75 ó 3 (se muestran dos posibles enfermedades auditivas: Tapones de Cerumen ó Presbiacusia)
-            if(sumaValoresUsuario == 2.75 || sumaValoresUsuario == 3) {
-                location.href = '{% url 'EnfTaponesPresbiacusia' %}';
-                // REDIRECCIONAR A PANTALLA DE TAPONESPRESBIACUSIA
-                console.log("PANTALLA TAPONESPRESBIACUSIA");
-            }
-
-            // 7. Caso en que los síntomas den un valor de 4.25 (se muestran dos posibles enfermedades auditivas: Tinnitus ó Otosclerosis)
+            // 4. Caso en que los síntomas den un valor de 4.25 (se muestran dos posibles enfermedades auditivas: Tinnitus ó Otosclerosis)
             if(sumaValoresUsuario == 4.25) {
                 location.href = '{% url 'EnfTinnitusOtosclerosis' %}';
                 // REDIRECCIONAR A PANTALLA DE TINNITUSOTOSCLEROSIS
                 console.log("PANTALLA TINNITUSOTOSCLEROSIS");
+                return;
             }
 
             console.log("SUMA VALORES USUARIO: " + sumaValoresUsuario);
             
-            // 8. Casos en que la suma original por fila del módulo precargado sea igual a la suma de todos los valores del arreglo de datos ingresados por el usuario             
+            // 5. Casos en que la suma original por fila del módulo precargado sea igual a la suma de todos los valores del arreglo de datos ingresados por el usuario             
             // TAPONES DE CERUMEN
             if(nuevaSumaSintomasTaponesCerumen == sumaModuloPrecargadoTaponesCerumen) {
                 console.log("TIENES LA ENFERMEDAD DE TAPONES DE CERUMEN");
@@ -608,15 +595,7 @@
                 location.href = '{% url 'EnfOtro' %}';
                 console.log("OTRO");
             }
-            // DERMATITIS SEBORREICA
-            if(nuevaSumaSintomasDerSebo == sumaModuloPrecargadoDermatitisSeborreica) {
-                location.href = '{% url 'EnfDermatitisSeborreica' %}';
-                console.log("TIENES LA ENFERMEDAD DE DERMATITÍS SEBORRÉICA");
-                return;
-            } else {
-                location.href = '{% url 'EnfOtro' %}';
-                console.log("OTRO");
-            }
+
             // OTITIS EXTERNA
             if(nuevaSumaSintomasOtoExt == sumaModuloPrecargadoOtitisExterna) {
                 location.href = '{% url 'EnfOtitisExterna' %}';
@@ -626,6 +605,17 @@
                 location.href = '{% url 'EnfOtro' %}';
                 console.log("OTRO");
             }
+
+            // DERMATITIS SEBORREICA
+            if(nuevaSumaSintomasDerSebo == sumaModuloPrecargadoDermatitisSeborreica) {
+                location.href = '{% url 'EnfDermatitisSeborreica' %}';
+                console.log("TIENES LA ENFERMEDAD DE DERMATITÍS SEBORRÉICA");
+                return;
+            } else {
+                location.href = '{% url 'EnfOtro' %}';
+                console.log("OTRO");
+            }
+            
             // PRESBIACUSIA
             if(nuevaSumaSintomasPresb == sumaModuloPrecargadoPresbiacusia) {
                 location.href = '{% url 'EnfPresbiacusia' %}';
@@ -662,6 +652,21 @@
                 location.href = '{% url 'EnfOtro' %}';
                 console.log("OTRO");
             }            
+
+            // 6. Caso en que los síntomas den un valor de 2.75 ó 3 (se muestran dos posibles enfermedades auditivas: Tapones de Cerumen ó Presbiacusia)
+            if(sumaValoresUsuario == 2.75 || sumaValoresUsuario == 3) {
+                location.href = '{% url 'EnfTaponesPresbiacusia' %}';
+                // REDIRECCIONAR A PANTALLA DE TAPONESPRESBIACUSIA
+                console.log("PANTALLA TAPONESPRESBIACUSIA");
+            }
+
+            // 7. Caso en que todos los síntomas sean 1 ó que la suma de los síntomas de cada fila de la enfermedad respectivamente sea mayor a su máximo número 4.75
+            if(sumaValoresUsuario == 15 || sumaValoresUsuario >= 4.75) {
+                // REDIRECCIONAR A PANTALLA DE NO TIENES ENFERMEDADES 
+                location.href = '{% url 'EnfPeligro' %}';                
+                console.log("PANTALLA CUIDADO VETE A CHECAR");
+                return;
+            }
             
         }
     </script>
